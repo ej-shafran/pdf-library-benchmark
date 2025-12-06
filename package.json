@@ -1,0 +1,34 @@
+{
+  "name": "pdf-library-benchmark",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bench": "vitest bench --outputJson bench.json",
+    "compare": "tsx compare-benchmarks.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.24.0+sha256.196f4bd174ebcbd99786b33452f144cb2dc32ef4e7138ed44491e9d43d702d75",
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@vitest/browser-playwright": "^4.0.15",
+    "happy-dom": "^20.0.11",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "4.0.15"
+  },
+  "dependencies": {
+    "@pdfme/common": "^5.5.7",
+    "@pdfme/generator": "^5.5.7",
+    "@pdfme/schemas": "^5.5.7",
+    "@react-pdf/renderer": "^4.3.1",
+    "html2pdf.js": "^0.12.1",
+    "jspdf": "^3.0.4",
+    "pdf-lib": "^1.17.1",
+    "puppeteer": "^24.32.0",
+    "react": "^19.2.1"
+  }
+}
