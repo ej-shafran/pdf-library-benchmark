@@ -13,6 +13,7 @@
   "license": "ISC",
   "packageManager": "pnpm@10.24.0+sha256.196f4bd174ebcbd99786b33452f144cb2dc32ef4e7138ed44491e9d43d702d75",
   "devDependencies": {
+    "@types/pdfkit": "^0.17.4",
     "@types/react": "^19.2.7",
     "@vitest/browser-playwright": "^4.0.15",
     "happy-dom": "^20.0.11",
@@ -28,6 +29,7 @@
     "html2pdf.js": "^0.12.1",
     "jspdf": "^3.0.4",
     "pdf-lib": "^1.17.1",
+    "pdfkit": "^0.17.2",
     "puppeteer": "^24.32.0",
     "react": "^19.2.1"
   }

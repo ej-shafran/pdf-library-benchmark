@@ -6,6 +6,7 @@ import puppeteer from "puppeteer";
 import { jsPDF } from "jspdf";
 import { PDFDocument } from "pdf-lib";
 import { image as ImagePlugin } from "@pdfme/schemas";
+import PDFKitDocument from "pdfkit";
 
 import { image } from "./image.js";
 
@@ -49,6 +50,15 @@ describe("creating an empty pdf", () => {
     async () => {
       const doc = await PDFDocument.create();
       await doc.save();
+    },
+    { throws: true },
+  );
+
+  bench(
+    "pdfkit",
+    () => {
+      const doc = new PDFKitDocument();
+      doc.end();
     },
     { throws: true },
   );
@@ -128,6 +138,16 @@ describe('rendering "Hello, world!"', () => {
     { throws: true },
   );
 
+  bench(
+    "pdfkit",
+    () => {
+      const doc = new PDFKitDocument();
+      doc.text("Hello, world!");
+      doc.end();
+    },
+    { throws: true },
+  );
+
   benchPuppeteer(
     "puppeteer",
     async () => {
@@ -201,6 +221,16 @@ describe("rendering an image", () => {
       const png = await doc.embedPng(image);
       page.drawImage(png, { y: height - 60, width: 50, height: 60 });
       await doc.save();
+    },
+    { throws: true },
+  );
+
+  bench(
+    "pdfkit",
+    () => {
+      const doc = new PDFKitDocument();
+      doc.image("image.jpg", { width: 100, height: 50 });
+      doc.end();
     },
     { throws: true },
   );

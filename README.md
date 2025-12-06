@@ -19,34 +19,37 @@ These are the results of running `PUPPETEER=true pnpm bench --no-watch && pnpm c
 
 | Name      | Ops/sec  | Average (ms) | Relative        |
 |:---------:|:--------:|:------------:|:---------------:|
-| jsPDF     | 8,306.77 | 0.120        | Fastest         |
-| pdf-lib   | 4,740.41 | 0.211        | 1.75x slower    |
-| pdfme     | 3,521.49 | 0.284        | 2.36x slower    |
-| react-pdf | 2,495.44 | 0.401        | 3.33x slower    |
-| html2pdf  | 11.46    | 87.280       | 725.02x slower  |
-| puppeteer | 1.84     | 543.700      | 4516.39x slower |
+| jsPDF     | 8,351.12 | 0.120        | Fastest         |
+| pdf-lib   | 4,645.35 | 0.215        | 1.80x slower    |
+| pdfme     | 3,468.89 | 0.288        | 2.41x slower    |
+| react-pdf | 3,019.35 | 0.331        | 2.77x slower    |
+| pdfkit    | 667.52   | 1.498        | 12.51x slower   |
+| html2pdf  | 11.25    | 88.900       | 742.41x slower  |
+| puppeteer | 1.3      | 767.848      | 6412.39x slower |
 
 
 > rendering "Hello, world!"
 
 | Name      | Ops/sec  | Average (ms) | Relative        |
 |:---------:|:--------:|:------------:|:---------------:|
-| jsPDF     | 8,477.42 | 0.118        | Fastest         |
-| pdf-lib   | 3,344.45 | 0.299        | 2.53x slower    |
-| react-pdf | 759.59   | 1.317        | 11.16x slower   |
-| pdfme     | 196.99   | 5.076        | 43.03x slower   |
-| html2pdf  | 11.18    | 89.440       | 758.22x slower  |
-| puppeteer | 1.38     | 724.282      | 6140.05x slower |
+| jsPDF     | 8,202.55 | 0.122        | Fastest         |
+| pdf-lib   | 3,069.08 | 0.326        | 2.67x slower    |
+| react-pdf | 1,141.53 | 0.876        | 7.19x slower    |
+| pdfkit    | 701.95   | 1.425        | 11.69x slower   |
+| pdfme     | 226.51   | 4.415        | 36.21x slower   |
+| html2pdf  | 11.34    | 88.170       | 723.22x slower  |
+| puppeteer | 1.45     | 689.963      | 5659.46x slower |
 
 
 > rendering an image
 
-| Name      | Ops/sec | Average (ms) | Relative      |
-|:---------:|:-------:|:------------:|:-------------:|
-| react-pdf | 14.86   | 67.275       | Fastest       |
-| html2pdf  | 11.02   | 90.780       | 1.35x slower  |
-| pdf-lib   | 10.11   | 98.905       | 1.47x slower  |
-| pdfme     | 9.92    | 100.802      | 1.50x slower  |
-| jsPDF     | 7.69    | 130.065      | 1.93x slower  |
-| puppeteer | 1.2     | 830.018      | 12.34x slower |
+| Name      | Ops/sec | Average (ms) | Relative       |
+|:---------:|:-------:|:------------:|:--------------:|
+| pdfkit    | 591.64  | 1.690        | Fastest        |
+| react-pdf | 16.37   | 61.098       | 36.15x slower  |
+| html2pdf  | 10.92   | 91.610       | 54.20x slower  |
+| pdfme     | 9.79    | 102.184      | 60.46x slower  |
+| pdf-lib   | 9.6     | 104.211      | 61.66x slower  |
+| jsPDF     | 7.16    | 139.712      | 82.66x slower  |
+| puppeteer | 1.44    | 692.733      | 409.85x slower |
 ```
